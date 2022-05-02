@@ -11,12 +11,14 @@ public class SManager : MonoBehaviour
     public int dan;
     public int retsu;
     public int EqualNumber = 0;
-    public bool isRET;
+//    public bool isRET;
 
     public Text EqualNumberText;
     public Text ProblemText;
     public Text InputText;
     public Text TitleText;
+
+    public float elapsedTime;
 
     public struct DanRetsu
     {
@@ -38,6 +40,7 @@ public class SManager : MonoBehaviour
     void Start()
     {
         dan = Memo.dan;
+        // 11-19の段の時の初期化
         if (dan <= 19)
         {
             TitleText.text = dan.ToString() + "の段";
@@ -51,6 +54,7 @@ public class SManager : MonoBehaviour
             }
             Problem(ProbArr[0]);
         }
+        // ランダム18問の時の初期化
         else
         {
             TitleText.text = "ランダム18";
@@ -92,7 +96,8 @@ public class SManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // 経過時間を計る
+        elapsedTime += Time.deltaTime;
     }
 
     // 問題を出す
@@ -102,7 +107,7 @@ public class SManager : MonoBehaviour
         ProblemText.text = danretsu.dan.ToString() + "x" + NumberText + "=";
     }
 
-    // RETが押されたらフラグを立てる
+    // RETが押下された時の処理
     public void PushRETKey()
     {
         int sol;
@@ -116,11 +121,17 @@ public class SManager : MonoBehaviour
         }
         InputText.text = "0";
         RetsuCounter++;
-        if(RetsuCounter >= 18)
+        if (RetsuCounter >= 18)
         {
-            SceneManager.LoadScene("TitleScene");
-            RetsuCounter = 0;
+            //Debug.Log(elapsedTime.ToString());
+            Memo.point = EqualNumber;
+            Memo.elapsedTime = elapsedTime;
+            SceneManager.LoadScene("ResultScene");
+//            RetsuCounter = 0;
         }
-        Problem(ProbArr[RetsuCounter]);
+        else
+        {
+            Problem(ProbArr[RetsuCounter]);
+        }
     }
 }
