@@ -16,13 +16,11 @@ public class ResultManager : MonoBehaviour
     {
         double Time1;
         double Time2;
-
-        //        Debug.Log("start");
+        // •\Ž¦
         PointText.text = Memo.point.ToString() + " pt.";
 
         Time1 = (double)Memo.elapsedTime;
         Time2 = Math.Round(Time1, 2, MidpointRounding.AwayFromZero);
-
         TimeText.text = Time2.ToString() + " sec.";
     }
 

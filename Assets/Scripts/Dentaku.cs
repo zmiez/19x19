@@ -18,6 +18,7 @@ public class Dentaku : MonoBehaviour
     {
         
     }
+    // RETkeyˆÈŠO‚ÌƒL[‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—(RETkey‚ÍSManager‚Åˆ—)
     public void Push7Key()
     {
         if (SolutionText.text == "0")

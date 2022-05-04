@@ -69,30 +69,6 @@ public class SManager : MonoBehaviour
         }
     }
 
- /*   void Start_()
-    {
-        int sol;
-        TitleText.text = dan.ToString() + "‚Ì’i";
-        InputText.text = "0";
-
-        isRET = false;
-        for (retsu = 2; retsu < 20; retsu++)
-        {
-            sol = dan * retsu;
-            Problem(retsu);
-            while (isRET == false)
-            {
-//            Debug.Log(sol.ToString());
-            }
-            isRET = false;
-            if (sol.ToString() == InputText.text)
-            {
-                EqualNumber += 1;
-            }
-        }
-    }
-*/
-
     // Update is called once per frame
     void Update()
     {

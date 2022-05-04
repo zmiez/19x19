@@ -33,6 +33,7 @@ public class TitleManager : MonoBehaviour
     public void PushStartButton(int dan)
     {
         Memo.dan = dan;
+        // タイトル画面でRECORDボタンが押された場合
         if (dan == 10)
         {
             SceneManager.LoadScene("RecordScene");
