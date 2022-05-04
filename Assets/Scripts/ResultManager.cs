@@ -21,7 +21,7 @@ public class ResultManager : MonoBehaviour
         PointText.text = Memo.point.ToString() + " pt.";
 
         Time1 = (double)Memo.elapsedTime;
-        Time2 = Math.Round(Time1, 2);
+        Time2 = Math.Round(Time1, 2, MidpointRounding.AwayFromZero);
 
         TimeText.text = Time2.ToString() + " sec.";
     }
@@ -31,6 +31,13 @@ public class ResultManager : MonoBehaviour
     {
         
     }
+
+    public void PushRecordButton()
+    {
+        //        Debug.Log("テスト");
+        SceneManager.LoadScene("RecordScene");
+    }
+
     public void PushReturnButton()
     {
 //        Debug.Log("テスト");
