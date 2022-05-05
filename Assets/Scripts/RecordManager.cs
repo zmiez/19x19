@@ -18,13 +18,13 @@ public class RecordManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        double Time1;
-        double Time2;
+//        double Time1;
+//        double Time2;
 
         dan = Memo.dan;
         point = Memo.point;
-        Time1 = (double)Memo.elapsedTime;
-        Time2 = Math.Round(Time1, 2, MidpointRounding.AwayFromZero);
+//        Time1 = (double)Memo.elapsedTime;
+//        Time2 = Math.Round(Time1, 2, MidpointRounding.AwayFromZero);
 
         SaveData SV = new SaveData();
 
@@ -38,7 +38,7 @@ public class RecordManager : MonoBehaviour
         {
             Debug.Log("セーブデータが破損しています．");
         }
-
+/*
         // 得点の更新(タイトルから飛んで来た場合はしない処理)
         if (dan != 10)
         {
@@ -55,6 +55,7 @@ public class RecordManager : MonoBehaviour
                 SV.PtTimeArr[dan - 11].point = point;
             }
         }
+*/
         // 表示
         for (int i = 0; i < 10; i++)
         {
@@ -71,7 +72,7 @@ public class RecordManager : MonoBehaviour
             PointText[i].text = SV.PtTimeArr[i].point.ToString() + " pt.";
         }
         // ゲームデータのセーブ
-        SaveManager.Save("Save.json", SV);
+ //       SaveManager.Save("Save.json", SV);
 
     }
 

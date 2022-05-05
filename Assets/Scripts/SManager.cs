@@ -40,6 +40,7 @@ public class SManager : MonoBehaviour
     void Start()
     {
         dan = Memo.dan;
+        EqualNumberText.text = "0pt.";
         // 11-19‚Ì’i‚Ì‚Ì‰Šú‰»
         if (dan <= 19)
         {
@@ -93,7 +94,7 @@ public class SManager : MonoBehaviour
         if(sol.ToString() == InputText.text)
         {
             EqualNumber += 1;
-            EqualNumberText.text = EqualNumber.ToString();
+            EqualNumberText.text = EqualNumber.ToString() + "pt.";
         }
         InputText.text = "0";
         RetsuCounter++;
