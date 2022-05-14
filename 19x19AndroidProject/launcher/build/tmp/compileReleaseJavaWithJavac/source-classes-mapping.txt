@@ -1,0 +1,2 @@
+com/MiRiN/The19x19/BuildConfig.java
+ com.MiRiN.The19x19.BuildConfig
