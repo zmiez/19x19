@@ -464,7 +464,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-private_key.pepk
+!private_key.pepk
 
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
